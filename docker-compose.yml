@@ -1,0 +1,14 @@
+services:
+  pca:
+    build: .
+    volumes:
+      - ./results:/work/results
+    environment:
+      PYTHONPATH: /work/src
+      MPLBACKEND: Agg
+    command: python experiments/run_all.py
+  test:
+    build: .
+    environment:
+      PYTHONPATH: /work/src
+    command: python -m pytest tests -q

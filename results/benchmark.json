@@ -1,0 +1,129 @@
+{
+  "claims": {
+    "two_pixel": {
+      "pixels": [
+        13,
+        21
+      ],
+      "total": 75.0,
+      "spread_across": 36.62,
+      "spread_up": 38.39,
+      "spread_45": 64.96,
+      "spread_best": 64.98,
+      "spread_worst": 10.02,
+      "kept_ratio_best": 0.8663,
+      "mean_pixels": [
+        8.18,
+        7.81
+      ],
+      "zero0_pixels": [
+        15.0,
+        11.0
+      ],
+      "video_says": "total\u224875, across\u224837, 45\u00b0\u224865 peak, perp\u224810, kept\u224887%, mean\u22488/8, zero=[15,11]"
+    },
+    "total_spread_64": {
+      "value": 1201.5,
+      "video_says": "\u22481200"
+    },
+    "random_directions": {
+      "mean_ratio": 0.0158,
+      "best_of_1000_ratio": 0.0508,
+      "video_says": "mean\u22481.5%, best-of-1000\u22484.5%"
+    },
+    "power_iteration": {
+      "spread_t0_random": 16.0,
+      "spread_t1": 109.9,
+      "spread_t2": 137.8,
+      "spread_t3": 144.0,
+      "spread_t200_ours": 178.9,
+      "spread_eigh": 178.9,
+      "kept_ratio": 0.1489,
+      "video_says": "19\u2192158\u2192174\u2192176\u2192179(200 iters); 15%; numpy 178.9"
+    },
+    "spectrum": {
+      "k2": 0.2851,
+      "k5": 0.545,
+      "k10": 0.7382,
+      "k20": 0.8943,
+      "k_for_90": 21,
+      "k_for_99": 41,
+      "nonzero": 61,
+      "zero_pixels_always_white": 3,
+      "power_vs_eigh_abs_cos_top10_mean": 1.0,
+      "video_says": "2\u219229%,5\u219255%,10\u219274%,20\u219289%; k90=21,k99=41; rank 61 (3 dead pixels)"
+    },
+    "reconstruction_mse": {
+      "0": 18.773,
+      "1": 15.978,
+      "2": 13.421,
+      "5": 8.542,
+      "10": 4.914,
+      "20": 1.984,
+      "video_says": "k0\u22481200,k1\u22481000,k5\u2248550,k20\u2248127 (sum over 64 pixels)"
+    },
+    "reconstruction_mse_sum64": {
+      "0": 1201.5,
+      "1": 1022.6,
+      "2": 858.9,
+      "5": 546.7,
+      "10": 314.5,
+      "20": 127.0
+    },
+    "knn_1nn_holdout497": {
+      "64": 0.9899,
+      "2": 0.5915,
+      "5": 0.9195,
+      "10": 0.9819,
+      "20": 0.9879,
+      "video_says": "64\u219299%,2\u219258%,5\u219289%,10\u219296%,20\u219299%"
+    },
+    "ring": {
+      "total": 99.85771960971756,
+      "kept_ratio": 0.5135474379504728,
+      "miss_line": 48.576043544570446,
+      "miss_euclid": 6.251169348047483,
+      "video_says": "best line keeps \u224852%; line-miss \u22486/dots vs <0.5 on ring"
+    },
+    "market_live": {
+      "live": true,
+      "source": "yahoo",
+      "note": "yahoo LIVE 2024-10-16\u21922026-10-16 n=502",
+      "assets": [
+        "AAPL",
+        "MSFT",
+        "NVDA",
+        "JPM",
+        "XOM",
+        "JNJ",
+        "PG",
+        "TSLA",
+        "META",
+        "AMZN",
+        "UNH",
+        "CVX"
+      ],
+      "n_days": 501,
+      "pc1_share": 0.386,
+      "pc1_3_share": 0.6356,
+      "pc1_5_share": 0.7984,
+      "expectation": "PC1\u2248market 35-55%, PC1-3\u224860-75%, PC1-5\u224875-85% (literature + quant-pca-risk)"
+    }
+  },
+  "figures": [
+    "scree.png",
+    "cumvar.png",
+    "map2.png",
+    "components.png",
+    "rebuild_zero.png",
+    "ring.png",
+    "market_scree.png"
+  ],
+  "meta": {
+    "n": 1797,
+    "p": 64,
+    "xmax": 16.0,
+    "xmin": 0.0
+  },
+  "elapsed_s": 37.8
+}
