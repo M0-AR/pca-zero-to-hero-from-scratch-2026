@@ -156,7 +156,7 @@ pre{background:var(--bg);color:#e2e8f0;border-radius:10px;padding:16px;overflow-
 </table>
 <p>Two honest footnotes: the pulls' <i>early</i> trajectory depends on the random start (ours: 16 → 110 → 138 → 144 → 178.9), but the <i>endpoint</i> 178.9 is start-independent — report endpoints and seeds. The guesser gaps at k = 5/10 (±2–3pp) come from the 497-picture split, which the narration leaves unspecified (ours: seed 42).</p>
 <figure>
-<img src="ASSET_scree.png" alt="Scree plot: variance kept per component, digits data">
+<img src="docs/assets/figures/scree.png" alt="Scree plot: variance kept per component, digits data">
 <figcaption>Scree: the first direction keeps 14.9%, then a long tail — 21 directions for 90%, 41 for 99%.</figcaption>
 </figure>
 </div>
@@ -164,30 +164,30 @@ pre{background:var(--bg);color:#e2e8f0;border-radius:10px;padding:16px;overflow-
 <div class="card" id="gallery">
 <h2><span class="emo">🖼️</span>Gallery — watch it happen</h2>
 <figure>
-<img src="ASSET_demo_power_iteration.gif" alt="Animation: the best line swinging onto the slanted band of dots while spread climbs">
+<img src="docs/assets/figures/demo_power_iteration.gif" alt="Animation: the best line swinging onto the slanted band of dots while spread climbs">
 <figcaption><b>Demo 1 — every picture pulls.</b> The line swings onto the slanted band; spread climbs to 65.0. This is power iteration, no equations needed.</figcaption>
 </figure>
 <div class="grid2">
 <figure>
-<img src="ASSET_map2.png" alt="2-D map of all pictures coloured by digit">
+<img src="docs/assets/figures/map2.png" alt="2-D map of all pictures coloured by digit">
 <figcaption><b>The map from the start.</b> Two numbers per picture, colours unseen by the method. Zeros, fours, sixes, sevens cluster; fives and eights pile up.</figcaption>
 </figure>
 <figure>
-<img src="ASSET_components.png" alt="First six PCA directions drawn as red-blue pictures">
+<img src="docs/assets/figures/components.png" alt="First six PCA directions drawn as red-blue pictures">
 <figcaption><b>Directions as pictures.</b> Blue = positive weight, red = negative. The digits analogue of eigenfaces.</figcaption>
 </figure>
 </div>
 <figure>
-<img src="ASSET_demo_rebuild.gif" alt="Animation: a zero rebuilt from 0, 1, 2, 5, 10, 20, 40, 61 numbers">
+<img src="docs/assets/figures/demo_rebuild.gif" alt="Animation: a zero rebuilt from 0, 1, 2, 5, 10, 20, 40, 61 numbers">
 <figcaption><b>Demo 2 — rebuild.</b> From blur (average) to hole (k=2) to unmistakable zero (k=5) to near-identical (k=20).</figcaption>
 </figure>
 <div class="grid2">
 <figure>
-<img src="ASSET_cumvar.png" alt="Cumulative variance kept versus number of directions">
+<img src="docs/assets/figures/cumvar.png" alt="Cumulative variance kept versus number of directions">
 <figcaption><b>How many numbers?</b> 21 for 90%, 41 for 99%.</figcaption>
 </figure>
 <figure>
-<img src="ASSET_ring.png" alt="Dots on a ring and their projections onto the best straight line">
+<img src="docs/assets/figures/ring.png" alt="Dots on a ring and their projections onto the best straight line">
 <figcaption><b>Where it fails.</b> A ring needs one circular number; the straight line keeps 51% and misses by ~6 per dot.</figcaption>
 </figure>
 </div>
@@ -203,7 +203,7 @@ pre{background:var(--bg);color:#e2e8f0;border-radius:10px;padding:16px;overflow-
 <tr><td>PC1–5</td><td class="num"><b>79.8%</b></td><td>75–85% <span class="ok">✔</span></td></tr>
 </table>
 <figure>
-<img src="ASSET_market_scree.png" alt="Scree plot of live stock-market returns">
+<img src="docs/assets/figures/market_scree.png" alt="Scree plot of live stock-market returns">
 <figcaption>Live-market scree: one giant market factor, then sector tilts — the same shape as the digits scree, in a different universe.</figcaption>
 </figure>
 </div>

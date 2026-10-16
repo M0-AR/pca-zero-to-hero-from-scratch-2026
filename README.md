@@ -12,7 +12,12 @@
 
 **📌 In 30 seconds:** a digit is 64 ink numbers. 20 special directions keep **89.4%** of everything and guess digits as well as all 64 numbers (**98.8% vs 99.0%**). Each direction is found by letting **every picture pull on it, 200 times**. The same code finds the market's hidden "market factor" (**38.6%**) in live prices. It fails exactly once — on bends — and we show that too.
 
-[🎓 5-minute quiz](#-interactive-quiz-test-yourself) · [🌱 Beginner guide](#-beginner-guide--read-this-and-you-are-a-professional) · [🚀 60-second run](#-quick-start-60-seconds) · [🌐 Live interactive site](preview.html)
+[🎓 5-minute quiz](#-interactive-quiz-test-yourself) · [🌱 Beginner guide](#-beginner-guide--read-this-and-you-are-a-professional) · [🚀 60-second run](#-quick-start-60-seconds) · [🌐 Live interactive site](https://m0-ar.github.io/pca-zero-to-hero-from-scratch-2026/preview.html)
+
+> 🌐 **Read this page as a website** (same content + interactive quiz):
+> [`/`](https://m0-ar.github.io/pca-zero-to-hero-from-scratch-2026/) ·
+> [`/preview.html`](https://m0-ar.github.io/pca-zero-to-hero-from-scratch-2026/preview.html) ·
+> [`/docs/preview.html`](https://m0-ar.github.io/pca-zero-to-hero-from-scratch-2026/docs/preview.html)
 
 ![Power iteration demo: the best line swinging onto the band of dots](results/figures/demo_power_iteration.gif)
 *☝️ Watch it: the line swings onto the slanted band while spread climbs to 65.0. That is power iteration — no equations needed. ([Full gallery](#-gallery--watch-it-happen) · [interactive site](preview.html))*
@@ -106,7 +111,7 @@ Plain numbers cancel out (dots on opposite sides of the middle sum to ~0). Squar
 | 🗺️ **The famous map** | Every picture as 2 numbers, coloured by digit — zeros with zeros, sevens with sevens, fives/eights piled in the middle. |
 | 📈 **Live-market proof** | Same code path on 12 US stocks via live prices: PC1 **38.6%**, PC1–5 **79.8%** — the market factor, rediscovered unsupervised. |
 | 💥 **The failure, shown** | Ring demo: best line keeps 51.4%, misses by ~6 per dot. Know exactly when to go nonlinear. |
-| 🎓 **Quiz + interactive site** | 8-question self-test with explanations ([take it live](preview.html#quiz)) + a published how-to below. |
+| 🎓 **Quiz + interactive site** | 8-question self-test with explanations ([take it live](https://m0-ar.github.io/pca-zero-to-hero-from-scratch-2026/preview.html#quiz)) + a published how-to below. |
 | 🐳 **One-command reproduction** | `docker compose up --build` regenerates every number and figure; `docker compose run --rm test` runs the checks. |
 | 📄 **Doctoral launchpad** | `paper/OUTLINE.md` + per-digit error gaps + machine-readable ground truth for six follow-up studies. |
 
@@ -131,7 +136,7 @@ Plain numbers cancel out (dots on opposite sides of the middle sum to ~0). Squar
 ## 🚀 Quick start (60 seconds)
 
 ```bash
-git clone <your-fork-url> pca-zero-to-hero && cd pca-zero-to-hero
+git clone https://github.com/M0-AR/pca-zero-to-hero-from-scratch-2026.git pca-zero-to-hero && cd pca-zero-to-hero
 docker compose up --build        # benchmark → results/benchmark.json + results/figures/
 docker compose run --rm test     # 3 checks, incl. the 178.9 exercise
 ```
@@ -171,13 +176,13 @@ Our `power_iteration(Xc, seed=123, iters=200)` returns **178.9**; the independen
 | ![2-D map of all pictures coloured by digit](results/figures/map2.png) **The map.** Two numbers per picture; colours unseen by the method. | ![First six PCA directions as red-blue pictures](results/figures/components.png) **Directions as pictures.** Blue +, red −. The digits analogue of eigenfaces. |
 | ![Zero rebuilt from 0 to 61 numbers](results/figures/demo_rebuild.gif) **Rebuild.** Blur → hole (k=2) → zero (k=5) → near-identical (k=20). | ![Scree plot](results/figures/scree.png) **Scree.** PC1 keeps 14.9%, then the long tail. |
 | ![Cumulative variance](results/figures/cumvar.png) **How many?** 21 directions for 90%, 41 for 99%. | ![Ring failure demo](results/figures/ring.png) **Where it fails.** Straight line vs bend: 51.4% kept, ~6 miss per dot. |
-| ![Live market scree](results/figures/market_scree.png) **Live market.** One giant factor, then sector tilts — same shape, different universe. | [![Interactive site hero](results/figures/preview_hero.png)](preview.html) **Interactive site.** Quiz + guide + tables as a page — [open it](preview.html). |
+| ![Live market scree](results/figures/market_scree.png) **Live market.** One giant factor, then sector tilts — same shape, different universe. | [![Interactive site hero](results/figures/preview_hero.png)](https://m0-ar.github.io/pca-zero-to-hero-from-scratch-2026/preview.html) **Interactive site.** Quiz + guide + tables as a page — [open it](https://m0-ar.github.io/pca-zero-to-hero-from-scratch-2026/preview.html). |
 
 ---
 
 ## 🎓 Interactive quiz — test yourself
 
-**[👉 Take the interactive version (instant feedback + score) here.](preview.html#quiz)** Scoring: 7–8 = pro, 5–6 = solid, below = re-read the 🌱 guide (four minutes). The questions, with answers hidden:
+**[👉 Take the interactive version (instant feedback + score) here.](https://m0-ar.github.io/pca-zero-to-hero-from-scratch-2026/preview.html#quiz)** Scoring: 7–8 = pro, 5–6 = solid, below = re-read the 🌱 guide (four minutes). The questions, with answers hidden:
 
 <details><summary>1. A pixel holds one number. What does it mean?</summary>
 How dark the ink is in that square (0 = white … 16 = darkest). — Each square is one sensor reading; the picture is 64 readings in a row.
@@ -275,15 +280,28 @@ Data `X ∈ ℝⁿˣᵖ`, centred `Xc = X − 1μᵀ`. A direction is a unit vec
 
 ## 🌐 This repo as a website (GitHub Pages)
 
-`preview.html` (source) and `docs/index.html` (published copy, self-contained figures in `docs/assets/figures/`, built by `experiments/make_site.py`) present this README as an interactive page with the quiz. Enable it on your fork:
+The interactive page (guide + quiz + tables) lives at three URLs that all render — pick any:
 
-1. Push to GitHub → **Settings → Pages**.
-2. **Source → GitHub Actions** (the included `.github/workflows/pages.yml` rebuilds figures + site on every push and publishes `docs/`).
-   *Alternative without Actions:* **Source → Deploy from a branch**, branch `main`, folder `/docs`, Save.
-3. Visit `https://<you>.github.io/<repo>/` in a minute or two.
+| URL | What it serves |
+|---|---|
+| [`/`](https://m0-ar.github.io/pca-zero-to-hero-from-scratch-2026/) | entry → forwards to `/preview.html` |
+| [`/preview.html`](https://m0-ar.github.io/pca-zero-to-hero-from-scratch-2026/preview.html) | the full page (root mirror) |
+| [`/docs/preview.html`](https://m0-ar.github.io/pca-zero-to-hero-from-scratch-2026/docs/preview.html) | the full page (`docs/` mirror) |
 
-<!-- After publishing, replace <your-fork-url> above with your repo URL and optionally add:
-[![Star History](https://api.star-history.com/svg?repos=YOUR_USER/YOUR_REPO&type=Date)](https://star-history.com/#YOUR_USER/YOUR_REPO&Date)
+**Settings for this repo (keeps all three green):** **Settings → Pages → Source: Deploy from a branch**, branch `main`, folder **`/` (root)**. URL paths then mirror repo paths, so `/preview.html` → `preview.html` and `/docs/preview.html` → `docs/preview.html` (both committed, images verified in-browser). The included `.github/workflows/pages.yml` additionally rebuilds figures + pages on every push. After changing Pages settings, wait 1–2 min, then probe:
+
+```bash
+BASE="https://m0-ar.github.io/pca-zero-to-hero-from-scratch-2026"
+for p in "" "preview.html" "docs/preview.html"; do
+  printf "%s -> " "/$p"; curl -s -o /dev/null -w "%{http_code}\n" "$BASE/$p"
+done
+# expect: 200 / 200 / 200
+```
+
+**How the mirrors are built:** `preview.html` is the source; `experiments/make_site.py` mechanically rewrites asset paths into `docs/index.html` + `docs/preview.html` (`assets/figures/…`) and root `preview.html` (`docs/assets/figures/…`), plus root `index.html` (redirect with fallback links) and `.nojekyll` in both roots. Figures live vendored in `docs/assets/figures/`, so every mirror is self-contained. Re-run `make_site.py` after changing figures or `preview.html`.
+
+<!-- Optional once stars accumulate:
+[![Star History](https://api.star-history.com/svg?repos=M0-AR/pca-zero-to-hero-from-scratch-2026&type=Date)](https://star-history.com/#M0-AR/pca-zero-to-hero-from-scratch-2026&Date)
 -->
 
 ---
@@ -295,7 +313,7 @@ src/pca_from_scratch/   pca.py (method) · data.py (digits + live market) · eva
 experiments/            run_all.py (E1–E7) · make_gifs.py (demos) · make_site.py (Pages)
 tests/                  the 178.9 exercise as pytest
 results/                benchmark.json (proof) · figures/ (7 PNGs + 2 GIFs + hero)
-docs/                   published site (built, self-contained)   preview.html (source)
+docs/                   index.html + preview.html (mirrors, self-contained)   preview.html (source mirror, root)
 paper/                  doctoral-extension outline   .github/workflows/pages.yml
 ```
 
